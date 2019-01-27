@@ -35,4 +35,18 @@ defmodule NumberTest do
       assert Number.equal?(Number.positive(10), Number.negative(10)) == false
     end
   end
+
+  describe "addition" do
+    test "+10 + +10" do
+      assert Number.add(Number.positive(10), Number.positive(10)) == Number.positive(20)
+    end
+
+    test "-10 + -10" do
+      assert Number.add(Number.negative(10), Number.negative(10)) == Number.negative(20)
+    end
+
+    test "-10 + +15" do
+      assert Number.add(Number.negative(10), Number.positive(15)) == Number.positive(5)
+    end
+  end
 end
