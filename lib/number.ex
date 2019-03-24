@@ -15,14 +15,6 @@ defmodule Number do
     sign_1 == sign_2 && size_1 == size_2
   end
 
-  def add(%{size: size_1, sign: :positive}, %{sign: :positive, size: size_2}) do
-    %Number{sign: :positive, size: size_1 + size_2}
-  end
-
-  def add(%{size: size_1, sign: :negative}, %{sign: :negative, size: size_2}) do
-    %Number{sign: :negative, size: size_1 + size_2}
-  end
-
   def add(%{size: size_1, sign: :positive}, %{sign: :negative, size: size_2}) do
     if size_1 > size_2 do
       %Number{sign: :positive, size: size_1 - size_2}
@@ -37,6 +29,10 @@ defmodule Number do
     else
       %Number{sign: :positive, size: size_2 - size_1}
     end
+  end
+
+  def add(%{size: size_1, sign: sign}, %{size: size_2}) do
+    %Number{sign: sign, size: size_1 + size_2}
   end
 
   def subtract(number_1, number_2) do
