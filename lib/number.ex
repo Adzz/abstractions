@@ -1,12 +1,16 @@
 defmodule Number do
-  def positive(size) do
+  defstruct [:left, :right]
+
+  def positive(number) do
+    %Number{left: 0, right: number}
   end
 
-  def negative(size) do
+  def negative(number) do
+    %Number{left: number, right: 0}
   end
 
-  def equal?(number_1, number_2) do
-    raise "Not implemented"
+  def equal?(%{left: left, right: right}, %{left: other_left, right: other_right}) do
+    left + other_right == other_left + right
   end
 
   def add(number_1, number_2) do
