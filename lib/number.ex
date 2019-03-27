@@ -21,8 +21,11 @@ defmodule Number do
     %Number{left: left + other_right, right: right + other_left}
   end
 
-  def multiply(number_1, number_2) do
-    raise "Not implemented"
+  def multiply(%{left: left, right: right}, %{left: other_left, right: other_right}) do
+    %Number{
+      left: left * other_right + other_left * right,
+      right: left * other_left + right * other_right
+    }
   end
 
   def less_than?(number_1, number_2) do
