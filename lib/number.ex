@@ -67,7 +67,23 @@ defmodule Number do
     end
   end
 
-  def less_than?(number_1, number_2) do
-    raise "Not implemented"
+  def less_than?(%{size: 0}, %{size: 0}) do
+    false
+  end
+
+  def less_than?(%{size: size_1, sign: :positive}, %{sign: :positive, size: size_2}) do
+    size_1 < size_2
+  end
+
+  def less_than?(%{sign: :negative}, %{sign: :positive}) do
+    true
+  end
+
+  def less_than?(%{sign: :positive}, %{sign: :negative}) do
+    false
+  end
+
+  def less_than?(%{size: size_1, sign: :negative}, %{sign: :negative, size: size_2}) do
+    size_1 > size_2
   end
 end
