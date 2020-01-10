@@ -1,21 +1,9 @@
 # Abstractions
 
-**TODO: Add description**
+This is an exploration of the topics and approach discussed in this excellent talk:
 
-## Installation
+[https://www.youtube.com/watch?time_continue=64&v=ej-W956YQN0&feature=emb_logo](https://www.youtube.com/watch?time_continue=64&v=ej-W956YQN0&feature=emb_logo)
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `abstractions` to your list of dependencies in `mix.exs`:
+by Tom Stuart.
 
-```elixir
-def deps do
-  [
-    {:abstractions, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/abstractions](https://hexdocs.pm/abstractions).
-
+Watch it.
