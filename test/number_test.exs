@@ -34,6 +34,10 @@ defmodule NumberTest do
     test "+10 != -10" do
       assert Number.equal?(Number.positive(10), Number.negative(10)) == false
     end
+
+    test "+0 == -0" do
+      assert Number.equal?(Number.positive(0), Number.negative(0)) == true
+    end
   end
 
   describe "addition" do
@@ -79,12 +83,12 @@ defmodule NumberTest do
              )
     end
 
-    # test "+ 1 + -1 = -1 + +1" do
-    #   assert Number.equal?(
-    #            Number.add(Number.positive(1), Number.negative(1)),
-    #            Number.add(Number.negative(1), Number.positive(1))
-    #          )
-    # end
+    test "+ 1 + -1 = -1 + +1" do
+      assert Number.equal?(
+               Number.add(Number.positive(1), Number.negative(1)),
+               Number.add(Number.negative(1), Number.positive(1))
+             )
+    end
   end
 
   describe "subtraction" do

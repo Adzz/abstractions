@@ -9,6 +9,8 @@ defmodule Number do
     %Number{size: size, sign: :negative}
   end
 
+  def equal?(%{size: 0}, %{size: 0}), do: true
+
   def equal?(%{size: size_1, sign: sign_1}, %{sign: sign_2, size: size_2}) do
     sign_1 == sign_2 && size_1 == size_2
   end
