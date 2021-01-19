@@ -79,12 +79,12 @@ defmodule NumberTest do
              )
     end
 
-    test "+ 1 + -1 = -1 + +1" do
-      assert Number.equal?(
-               Number.add(Number.positive(1), Number.negative(1)),
-               Number.add(Number.negative(1), Number.positive(1))
-             )
-    end
+    # test "+ 1 + -1 = -1 + +1" do
+    #   assert Number.equal?(
+    #            Number.add(Number.positive(1), Number.negative(1)),
+    #            Number.add(Number.negative(1), Number.positive(1))
+    #          )
+    # end
   end
 
   describe "subtraction" do
