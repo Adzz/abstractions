@@ -25,7 +25,7 @@ defmodule Number do
     raise "Not implemented"
   end
 
-  def less_than?(number_1, number_2) do
-    raise "Not implemented"
+  def less_than?(%{left: left, right: right}, %{left: other_left, right: other_right}) do
+    other_left + right < left + other_right
   end
 end

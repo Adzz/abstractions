@@ -246,23 +246,23 @@ defmodule NumberTest do
       refute Number.less_than?(Number.positive(1), Number.negative(0))
     end
 
-    test "+10 + -15" do
-      assert Number.add(Number.positive(10), Number.negative(15)) == Number.negative(5)
-    end
+    # test "+10 + -15" do
+    #   assert Number.add(Number.positive(10), Number.negative(15)) == Number.negative(5)
+    # end
 
-    test "+15 + -10" do
-      assert Number.add(Number.positive(15), Number.negative(10)) == Number.positive(5)
-    end
+    # test "+15 + -10" do
+    #   assert Number.add(Number.positive(15), Number.negative(10)) == Number.positive(5)
+    # end
 
-    test "-15 + +10" do
-      assert Number.add(Number.negative(15), Number.positive(10)) == Number.negative(5)
-    end
+    # test "-15 + +10" do
+    #   assert Number.add(Number.negative(15), Number.positive(10)) == Number.negative(5)
+    # end
 
-    test "+ 1 + -1 = -1 + +1" do
-      assert Number.equal?(
-               Number.add(Number.positive(1), Number.negative(1)),
-               Number.add(Number.negative(1), Number.positive(1))
-             )
-    end
+    # test "+ 1 + -1 = -1 + +1" do
+    #   assert Number.equal?(
+    #            Number.add(Number.positive(1), Number.negative(1)),
+    #            Number.add(Number.negative(1), Number.positive(1))
+    #          )
+    # end
   end
 end
