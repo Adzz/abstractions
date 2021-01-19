@@ -59,8 +59,12 @@ defmodule Number do
     %Number{sign: :negative, size: size_1 + size_2}
   end
 
-  def multiply(number_1, number_2) do
-    raise "Not implemented"
+  def multiply(%{size: size_1, sign: sign_1}, %{sign: sign_2, size: size_2}) do
+    if sign_1 == sign_2 do
+      %Number{sign: :positive, size: size_1 * size_2}
+    else
+      %Number{sign: :negative, size: size_1 * size_2}
+    end
   end
 
   def less_than?(number_1, number_2) do
