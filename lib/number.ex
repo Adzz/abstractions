@@ -13,8 +13,8 @@ defmodule Number do
     left + other_right == other_left + right
   end
 
-  def add(number_1, number_2) do
-    raise "Not implemented"
+  def add(%{left: left, right: right}, %{left: other_left, right: other_right}) do
+    %Number{left: left + other_left, right: right + other_right}
   end
 
   def subtract(number_1, number_2) do
